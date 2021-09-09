@@ -1,5 +1,16 @@
-.footer{
+ .footer {
+   height: var(--footer-height);
+   position: relative;
+   z-index: var(--z-index-footer);
+ }
+
+
+ /* .footer {
   height: var(--footer-height);
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   z-index: var(--z-index-footer);
-}
+} */
