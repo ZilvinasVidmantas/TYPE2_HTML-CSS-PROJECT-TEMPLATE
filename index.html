@@ -37,6 +37,18 @@
     </div>
   </nav>
 
+  <div class="sidebar__toggler">></div>
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a class="sidebar__link" href="#main">HTML</a></li>
+        <li><a class="sidebar__link" href="#articles">Antraštės</a></li>
+        <li><a class="sidebar__link" href="#html-element-structure">Elemento struktūra</a></li>
+        <li><a class="sidebar__link" href="#self-closing-elements">Savaime užsidarantys elementai</a></li>
+      </ul>
+    </nav>
+  </aside>
+
   <main id="main" class="pt-navbar-height">
     <div class="container container--narrow  container--with-sidebar-left mt-4">
       <h1 class="mb-3">Pagrindiniai HTML elementai</h1>
@@ -45,18 +57,22 @@
       </p>
     </div>
 
-    <section id="antraštės" class="navbar-anchor-fix">
+    <section id="articles" class="navbar-anchor-fix">
       <div class="container container--narrow  container--with-sidebar-left mt-5">
         <h2 class="mb-2">Antraštės</h2>
         <p>
           Antraštės - tai puslapio sekcijų įvardinimas/apibūdinimas. Antraštės turi būti įvardintos mažejimo tvarka ir
           negalima praleisti jų dydžių: h1-> h2-> h3.
         </p>
-        <article>
+      </div>
+      <section id="html-element-structure" class="navbar-anchor-fix">
+        <div class="container container--narrow  container--with-sidebar-left mt-5">
           <h2 class="mb-3 mt-5">HTML elemento struktūra</h2>
           <img src="images/html-element-structure.png" class="w-100" />
-        </article>
-        <article>
+        </div>
+      </section>
+      <section id="self-closing-elements" class="navbar-anchor-fix">
+        <div class="container container--narrow  container--with-sidebar-left mt-5">
           <h2 class="mb-2 mt-5">Savaime užsidarantys elementai</h2>
           <p>
             <strong>
@@ -117,7 +133,8 @@
             </strong> <br>
 
           </p>
-        </article>
+        </div>
+      </section>
 
       </div>
     </section>
