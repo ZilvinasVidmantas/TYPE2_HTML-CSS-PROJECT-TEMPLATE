@@ -12,6 +12,8 @@
 </head>
 
 <body>
+
+  <!-- Navigacija TOP -->
   <nav class="navbar navbar-expand-lg">
     <div class="container h-100">
       <div class="d-flex h-100 justify-content-between">
@@ -28,8 +30,8 @@
             <li><a class="navbar__link active" href="index.html">HTML</a></li>
             <li><a class="navbar__link" href="pages/display-types.html">Display types</a></li>
             <li><a class="navbar__link" href="pages/flex.html">Flex</a></li>
-            <li><a class="navbar__link" href="pages/position.html">Position</a></li>
             <li><a class="navbar__link" href="pages/grid.html">Grid</a></li>
+            <li><a class="navbar__link" href="pages/position.html">Position</a></li>
             <li><a class="navbar__link" href="pages/git.html">GIT</a></li>
           </ul>
         </div>
@@ -37,4 +39,53 @@
     </div>
   </nav>
 
+  <!-- Navigacija sone -->
+  <div class="sidebar__toggler">></div>
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a class="sidebar__link" href="#main">Pagrindinis</a></li>
+        <li><a class="sidebar__link" href="#git-init">Pasirengimas darbui</a></li>
+        <li><a class="sidebar__link" href="#git-files-update">Failų atnaujinimas</a></li>
+        <li><a class="sidebar__link" href="#git-feature-flow">Naujo funkcionalumo kūrimas</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Content -->
+  <main id="main" class="pt-navbar-height">
+    <div class="container container--narrow  container--with-sidebar-left mt-4">
+      <h1 class="mb-3">Main</h1>
+      <p>
+        asd
+      </p>
+    </div>
+
+    <section id="git-init" class="navbar-anchor-fix">
+      <div class="container container--narrow  container--with-sidebar-left mt-5">
+        <h2 class="mb-2">Section 1</h2>
+        <p>
+          asd
+        </p>
+      </div>
+    </section>
+
+    <section id="git-init" class="navbar-anchor-fix">
+      <div class="container container--narrow  container--with-sidebar-left mt-5">
+        <h2 class="mb-2">Section 3</h2>
+        <p>
+          asd
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-center text-light py-3 mt-5">
+    <span>All rights reserved CodeAcademy © 2021</span>
+  </footer>
+
 </body>
+
+</html>
