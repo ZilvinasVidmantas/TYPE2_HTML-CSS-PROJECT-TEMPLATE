@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Flex</title>
 
   <link rel="stylesheet" href="../css/main.css">
   <script src="../js/navbar.js" defer></script>
@@ -45,10 +45,12 @@
   <aside class="sidebar">
     <nav>
       <ul>
-        <li><a class="sidebar__link" href="#main">Pagrindinis</a></li>
-        <li><a class="sidebar__link" href="#git-init">Pasirengimas darbui</a></li>
-        <li><a class="sidebar__link" href="#git-files-update">Failų atnaujinimas</a></li>
-        <li><a class="sidebar__link" href="#git-feature-flow">Naujo funkcionalumo kūrimas</a></li>
+        <li><a class="sidebar__link" href="#main">Flex</a></li>
+        <li><a class="sidebar__link" href="#flex-direction">Flex direction</a></li>
+        <li><a class="sidebar__link" href="#flex-wrap">Flex wrap</a></li>
+        <li><a class="sidebar__link" href="#flex-flow">Flex flow</a></li>
+        <li><a class="sidebar__link" href="#justify-content">Justify content</a></li>
+        <li><a class="sidebar__link" href="#align-content">Align content</a></li>
       </ul>
     </nav>
   </aside>
@@ -56,26 +58,112 @@
   <!-- Content -->
   <main id="main" class="pt-navbar-height">
     <div class="container container--narrow  container--with-sidebar-left mt-4">
-      <h1 class="mb-3">Main</h1>
+      <h1 class="mb-3">Flex</h1>
       <p>
-        asd
+        Flex, <code>Display: flex</code>, yra konteinerių lygiavimo elementas.
       </p>
+      <a href="https://flexboxfroggy.com/" target="blank">interaktyvus flexbox žaidimas</a>
     </div>
-
-    <section id="git-init" class="navbar-anchor-fix">
+    
+    <section id="flex-direction" class="navbar-anchor-fix">
       <div class="container container--narrow  container--with-sidebar-left mt-5">
-        <h2 class="mb-2">Section 1</h2>
+        <h2 class="mb-3"><code class="h4">flex-direction</code></h2>
+        <p class="mb-3">
+          <code>flex-direction</code> nustato kryptį, kuria bus lygiuojami vaikiniai elementai, flex konteinerio elemente:
+        </p>
+        <ul class="ul">
+          <li><code>row (default)</code>: iš kairės į dešinę <code>ltr</code> left to right padėtyje; iš dešinės į kaire <code>rtl</code> right to left padėtyje.</li>
+          <li><code>row-reverse</code>: priešinga kryptimi <code>ltr</code> padėtyje iš dešinės į kairę; <code>rtl</code> padėtyje iš kairės į dešinę.</li>
+          <li><code>column</code>: stulpeliu nuo viršaus žemyn.</li>
+          <li><code>column-reverse</code>: stulpeliu priešinga kryptimi.</li>
+        </ul>
+      </div>
+    </section>
+    <section id="flex-wrap" class="navbar-anchor-fix">
+      <div class="container container--narrow  container--with-sidebar-left mt-5">
+        <h2 class="mb-2"><code class="h4">flex-wrap</code></h2>
         <p>
-          asd
+          Pagal numatytus nustatymus, objektai, esantys tėviniame flex konteineryje, bandys lygiuotis vienoje eilėje. Tą galima pakeisti su <code>flex-wrap</code>, kad objektai nebetelpantys tėvinio elemento eilutėje persikeltų į kitą.
+        </p>
+        <ul class="ul">
+          <li><code>nowrap (default)</code>: visi flex objektai rykiuojasi vienoje eilėje.</li>
+          <li><code>wrap</code>: objektai rykiuosis skirtingose eilutėse nuo viršaus į apačią.</li>
+          <li><code>wrap-reverse</code>: objektai rykiuosis skirtingose eilutėse nuo apačios į viršų.</li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section id="flex-flow" class="navbar-anchor-fix">
+      <div class="container container--narrow  container--with-sidebar-left mt-5">
+        <h2 class="mb-2"><code class="h4">flex-flow</code></h2>
+        <p>
+          Tai yra <code>flex-wrap</code> ir <code>flex-direction</code> trumpinys, kuris yra sudėtas į vieną savybę. Numatytas nustatymas yra <code> flex-flow: row nowrap;</code>
         </p>
       </div>
     </section>
 
+    <section id="justify-content" class="navbar-anchor-fix">
+      <div class="container container--narrow  container--with-sidebar-left mt-5">
+        <h2 class="mb-2"><code class="h4">justify-content</code></h2>
+        <p>
+          This defines the alignment along the main axis. It helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.</p>
+        <ul class="ul">
+          <li><code>flex-start (default)</code>: items are packed toward the start of the flex-direction.</li>
+          <li><code>flex-end</code>: items are packed toward the end of the flex-direction.</li>
+          <li><code>start</code>: items are packed toward the start of the writing-mode direction.</li>
+          <li><code>end</code>: items are packed toward the end of the writing-mode direction.</li>
+          <li><code>left</code>: items are packed toward left edge of the container, unless that doesn’t make sense with the flex-direction, then it behaves like start.</li>
+          <li><code>right</code>: items are packed toward right edge of the container, unless that doesn’t make sense with the flex-direction, then it behaves like end.</li>
+          <li><code>center</code>: items are centered along the line</li>
+          <li><code>space-between</code>: items are evenly distributed in the line; first item is on the start line, last item on the end line</li>
+          <li><code>space-around</code>: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren’t equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.</li>
+          <li><code>space-evenly</code>: items are distributed so that the spacing between any two items (and the space to the edges) is equal.</li>
+        </ul>
+        <p>
+          Note that that browser support for these values is nuanced. For example, space-between never got support from some versions of Edge, and start/end/left/right aren’t in Chrome yet. MDN has detailed charts. The safest values are flex-start, flex-end, and center.
+
+There are also two additional keywords you can pair with these values: safe and unsafe. Using safe ensures that however you do this type of positioning, you can’t push an element such that it renders off-screen (e.g. off the top) in such a way the content can’t be scrolled too (called “data loss”).
+        </p>
+      </div>
+    </section>
+
+    <section id="align-content" class="navbar-anchor-fix">
+      <div class="container container--narrow  container--with-sidebar-left mt-5">
+        <h2 class="mb-2"><code class="h4">align-items</code></h2>
+        <p>
+          This defines the default behavior for how flex items are laid out along the cross axis on the current line. Think of it as the justify-content version for the cross-axis (perpendicular to the main-axis).
+        </p>
+        <ul class="ul">
+          <li><code>stretch (default)</code>: stretch to fill the container (still respect min-width/max-width)</li>
+          <li><code>flex-start / start / self-start</code>: items are placed at the start of the cross axis. The difference between these is subtle, and is about respecting the flex-direction rules or the writing-mode rules.</li>
+          <li><code>flex-end / end / self-end</code>: items are placed at the end of the cross axis. The difference again is subtle and is about respecting flex-direction rules vs. writing-mode rules.</li>
+          <li><code>center</code>: items are centered in the cross-axis</li>
+          <li><code>baseline</code>: items are aligned such as their baselines align</li>
+        </ul>
+        <p>
+          The safe and unsafe modifier keywords can be used in conjunction with all the rest of these keywords (although note browser support), and deal with helping you prevent aligning elements such that the content becomes inaccessible.
+        </p>
+      </div>
+    </section>
     <section id="git-init" class="navbar-anchor-fix">
       <div class="container container--narrow  container--with-sidebar-left mt-5">
-        <h2 class="mb-2">Section 3</h2>
+        <h2 class="mb-2"><code class="h4">align-content</code></h2>
         <p>
-          asd
+          This aligns a flex container’s lines within when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis.
+        </p>
+        <ul class="ul">
+          <li><code>normal (default)</code>: items are packed in their default position as if no value was set.</li>
+          <li><code>flex-start / start</code>: items packed to the start of the container. The (more supported) flex-start honors the flex-direction while start honors the writing-mode direction.</li>
+          <li><code>flex-end / end</code>: items packed to the end of the container. The (more support) flex-end honors the flex-direction while end honors the writing-mode direction.</li>
+          <li><code>center</code>: items centered in the container</li>
+          <li><code>space-between</code>: items evenly distributed; the first line is at the start of the container while the last one is at the end</li>
+          <li><code>space-around</code>: items evenly distributed with equal space around each line</li>
+          <li><code>space-evenly</code>: items are evenly distributed with equal space around them</li>
+          <li><code>stretch</code>: lines stretch to take up the remaining space</li>
+        </ul>
+        <p>
+          The safe and unsafe modifier keywords can be used in conjunction with all the rest of these keywords (although note browser support), and deal with helping you prevent aligning elements such that the content becomes inaccessible.
         </p>
       </div>
     </section>
@@ -89,4 +177,4 @@
 
 </body>
 
-</html>
+</html> 
