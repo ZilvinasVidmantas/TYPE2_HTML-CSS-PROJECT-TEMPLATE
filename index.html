@@ -37,20 +37,25 @@
     </div>
   </nav>
 
-  <main id="section-main">
-    <h1>Pagrindiniai HTML elementai</h1>
+  <main class="pt-navbar-height"> 
+    <div class="container container--narrow mt-4">
+    <h1 class="mb-3">Pagrindiniai HTML elementai</h1>
     <p>
       HTML tai puslapio struktūra - turinys. Turiniui kurti naudojama
       pagrindiniai HMTL elementai.
     </p>
     <article>
-      <h2>HTML elemento struktūra</h2>
+      <div class="container container--narrow mt-4">
+      <h2 class="mb-2">HTML elemento struktūra</h2>
       <img src="images/html-element-structure.png" width="100%" />
     </article>
+    </div>
+   </div>
   </main>
 
-  <section id="section-header">
-    <h2>Antraštės</h2>
+  <section class="navbar-anchor-fix">
+    <div class="container container--narrow mt-4">
+    <h2 class="mb-2">Antraštės</h2>
     <p>
       Antraštės tai puslapio sekcijų įvardinimas - apibūdinimas. Antraštės
       turi
@@ -58,16 +63,18 @@
       -> h2
       -> h3
     </p>
+    </div>
   </section>
 
-  <section id="section-display">
-    <h2>Elementų tipai; Display</h2>
+  <section class="navbar-anchor-fix">
+    <div class="container container--narrow mt-4">
+    <h2 class="pb-3">Elementų tipai; Display</h2>
     <p>
       <strong>CSS savybė display</strong> apibūdina, kaip bus
       atvaizduojamas -
       išdėstomas HTML elementas.
     </p>
-    <ul>
+    <ul class="ul">
       <li>
         <strong>inline</strong> - baigtinis tekstinis elementas
       </li>
@@ -83,7 +90,7 @@
     </ul>
     <article>
       <h3>Dažniausiai naudojami inline elementai</h3>
-      <ul>
+      <ul class="ul">
         <li><strong>span</strong> - bendrinis teksto elementas</li>
         <li><strong>strong</strong> - paryškintas tekto elementas</li>
         <li><strong>em</strong> - pasviręs teksto elementas</li>
@@ -181,10 +188,12 @@
         <li><strong>form</strong> - vartotojo įvesčių gaubiamasis elementas</li>
       </ul>
     </article>
+   </div>
   </section>
 
-  <section id="section-images">
-    <h2>Nuotraukos</h2>
+  <section class="navbar-anchor-fix">>
+  <div class="container container--narrow pt-4">
+    <h2 class="mb-2">Nuotraukos</h2>
     <p>
       Nuotraukos yra <strong>inline</strong> elementai. Visgi galima nustatyti nuotraukos plotį ir aukšti naudojant atributus. Nustačius vieną dimensiją(plotį arba aukštį) kita prisiderina pagal orginalios nuotrukos proporcijas. Jeigu nustatome 2 dimensijas, tuomet nuotrauka yra ištempiama (arba sutraukiama).
       Nuotraukos <strong>src</strong> atribute turime nurodyti kelią iki nuotraukos.
@@ -217,6 +226,7 @@
         <img src="https://unsplash.it/300/1500" height="100" width="100"/>
       </article>
     </article>
+  </div>
   </section>
 </body>
 
