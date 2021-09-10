@@ -17,5 +17,6 @@
 @import "components/lists.css";
 @import "components/footer.css";
 
-@import "sections/grid-task-1-section.css";
-@import "sections/grid-named-lines-section.css";
+@import "sections/position.css";
+@import "sections/grid-page.css";
+
