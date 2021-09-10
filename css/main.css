@@ -17,5 +17,6 @@
 @import "components/lists.css";
 @import "components/footer.css";
 
-@import "sections/grid-page.css"
+@import "sections/position.css";
+@import "sections/grid-page.css";
 
