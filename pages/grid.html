@@ -57,7 +57,346 @@
     </nav>
   </aside>
 
-  <main>
+    <main id="grid" class="pt-navbar-height">
+        <div class="container container--narrow  container--with-sidebar-left mt-4">
+          <h1 class="mb-3">Grid</h1>
+          <p>
+            Grid, tai toks CSS savybės <strong>display</strong> tipas, kuris
+            gali valdyti pirmo lygio vaikų išdėstymą tiek vertikaliai, tiek
+            horiontaliai. <br>
+            Taikydami papildomas savybes tėviniam elementui
+            (tam, kuriam pritaikyta CSS savybė <strong>display: grid;</strong>)
+            galime kurti stulpelius, eilutes ir netgi plotų šablonus(kuriuos
+            nagrinėsime vėliau.) <br> Nustačius eilučių, stulpelių ar plotų
+            šablonus, elementai yra išdėstomi pagal šiuos šablonus. Taip pat
+            galima pirmo lygio vaikams nurodyti kokią "tinklelio" dalį/plotą jis
+            užims.
+          </p>
+        </div>
+    
+        <section id="grid-template-columns" class="navbar-anchor-fix">
+          <div class="container container--narrow  container--with-sidebar-left mt-5">
+            <h2 class="mb-2">grid-template-columns</h2>
+            <p>
+                Ši savybė nusako į kiek, ir kokio pločio, stulpelių bus suskirstomas "grid" elementas.
+              </p>
+              <pre class="code">
+        ... {
+            display: grid;
+            grid-template-columns: 100px 200px 100px 50px;<span class="code__comment">
+            pirmojo stulpelio plotis ↗     ↗    ↗     ↗
+                antrojo stulpelio plotis ↗    ↗     ↗
+                  trečiojo stulpelio plotis ↗     ↗
+                    ketvirtojo stulpelio plotis ↗</span>
+        }</pre>
+            </div>
+          </section>
+            
+          <section id="grid-template-rows" class="navbar-anchor-fix">
+            <div class="container container--narrow  container--with-sidebar-left mt-5">
+              <h2 class="mb-2">grid-template-rows</h2>
+              <p>
+                Ši savybė nusako į kiek, ir kokio pločio, eilučių bus suskirstomas "grid" elementas.
+              </p>
+              <pre class="code">
+        ... {
+            display: grid;
+            grid-template-rows: 100px 50px 100px;<span class="code__comment">
+       pirmosios eilutės aukštis ↗     ↗    ↗
+           antrosios eilutės aukštis ↗    ↗
+             trečiosios eilutės aukštis ↗ 
+        }</span></pre>
+            </div>
+          </section>
+    
+          <section id="grid-column" class="navbar-anchor-fix">
+            <div class="container container--narrow  container--with-sidebar-left mt-5">
+              <h2 class="mb-2">grid-column</h2>
+              <p>
+                Ši CSS savybė nusako kiek stulplelių vaikinis elementas užims. <br>
+                Tai galima nurodyti rašant <strong>span x</strong>, kur x - stulpelų skaičius. <br>
+                Taip pat apibrėžti vaikinį elementą galima nurodant pradžios ir pabaigos stulpelių linijas. <br>
+                Linijos numeruojamos iš kairės į dešinę, pradedant vienetu: 1, 2, ... ,n; <br>
+                Taip pat linijos numeruojamos iš dešinės į kairę, tačiau su minuso ženklu: -1, -2, ...,-n;
+                Linijų kiekis (n) - visada vienetu didesnis nei stulpelių skaičius.
+              </p>
+              <pre class="code">
+        .father {
+          display: grid;
+          grid-template-columns: 100px 100px 100px 100px;
+        }
+    
+        <span class="code__comment">/* vaikinis elementas užims 2 stulpelius */</span>
+        .child-1 {
+          grid-column: span 2; 
+        }
+        
+        <span class="code__comment">/* elementas prasidės nuo 2 linijos ir pasibaigs ties ketvirta */</span>
+        .child-2 {
+          grid-column: 2 / 4;
+        }
+        
+        <span class="code__comment">/* elementas prasidės nuo 2 linijos ir pasibaigs paskutine */</span>
+        .child-3 {
+          grid-column: 2 / -1;
+        }</pre>
+            </div>
+          </section>
+                 
+          <section id="grid-row" class="navbar-anchor-fix">
+            <div class="container container--narrow  container--with-sidebar-left mt-5">
+              <h2 class="mb-2">grid-row</h2>
+              <p>
+                Ši savybė aprašo kiek ir kokių eilučių užims "grid" vaikinis elementas. Principai veikia taip pat kaip ir
+                savybėje <strong><a href="#grid-column">grid-column</a></strong>
+              </p>
+            </div>
+          </section>
+    
+          <section id="grid-plotai" class="navbar-anchor-fix">
+            <div class="container container--narrow  container--with-sidebar-left mt-5">
+              <h2 class="mb-2">Grid plotai</h2>
+              <p>
+                Sudarius tinklelį naudojant stulpelius ir eilutes yra automatiškai sukuriamos linijos. <br>
+            <strong>grid-area</strong> tai keturiomis linijomis apibrėžtas vaikinio elemento plotas - viršutinė, kairė,
+            apatinė ir dešinė linijos. Jis visuomet turi būti stačiakampio formos. <br>
+            Grid pirmo lygio vaikų plotą taip pat galime apibrėžti žodiniu pavidalu, kuomet tėviniame elemente esame aprašę
+            plotų šabloną.
+              </p>
+            </div>
+          </section>
+    
+          <section id="grid-area" class="navbar-anchor-fix">
+            <div class="container container--narrow  container--with-sidebar-left mt-5">
+              <h2 class="mb-2">grid-area</h2>
+              <p>
+                Ši savybė taikoma vaikiniam "grid" elementui. Plotas gali būt aprašomas linijomis, arba pagal ploto
+                pavadinimą (<em>ploto pavadinimas turi būti aprašytas tėvinio "grid" šablone.</em>).
+              </p>
+              <pre class="code">
+                            .child-1 {
+                              grid-area: 2 / 4 / 4 / 6;
+              <span class="code__comment">viršutinė eilutės linija  ↗   ↗  ↗  ↗</span>
+                    <span class="code__comment">kairė stupelio linija ↗  ↗  ↗</span>
+                    <span class="code__comment">apatinė eilutės linija ↗  ↗</span>
+                    <span class="code__comment">dešinė stulpelio linija ↗</span>
+                            }
+    
+                            <span class="code__comment">Vaikinis plotas įvardintas pagal tėvinio Grid plotų šabloną</span>
+                            .child-2 {
+                              grid-area: navbar;
+                            }
+    
+                            <span class="code__comment">Vaikinis plotas įvardintas pagal tėvinio Grid plotų šabloną</span>
+                            .child-3 {
+                              grid-area: sidebar;
+                            }
+              </pre>
+            </div>
+          </section>
+    
+          <section id="grid-template-areas" class="navbar-anchor-fix">
+            <div class="container container--narrow  container--with-sidebar-left mt-5">
+              <h2 class="mb-2">grid-template-areas</h2>
+              <p>
+                Ši savybė taikomai "grid" tėviniam elementui. Ši savybė sudaroma aprašant plotų šablonus mums patogiais
+                raktažodžiais. <br>
+                Sudarant plotų šabloną, svarbu įvardinti plotus taip, jog jie būtų stačiakampiai, priešingu atveju, šablonas
+                neveiks. <br>
+                Kiekvienos eilutės šablonas turi būti tarp dvigubų kabučių, pvz.: <strong>"raktažodis raktažodis1"</strong>.
+                Jungiant eilutes galime sudaryti visą 2D plotų šabloną. Raktažodžiai, gali kartotis skirtingose eilutėse.
+                <br>
+                Stulpelių kiekis, kiekvienoje eilutėje privalo būti vienodas!
+              </p>
+    
+              <pre class="code">
+              .grid-mobile {
+                display: grid;
+                grid-template-columns: 1fr; <span class="code__comment">// Aprašome vieną stulpelį</span>
+                grid-template-rows: 60px 60px auto auto auto 60px;<span class="code__comment">// 6 eilutės</span>
+                grid-template-areas:
+                  "header" <span class="code__comment">// pirmos eilutės šablonas</span>
+                  "nav" <span class="code__comment">// antros eilutės šablonas</span>
+                  "main" <span class="code__comment">// trečios eilutės šablonas</span>
+                  "ads" <span class="code__comment">// ketvirtos eilutės šablonas</span>
+                  "gallery" <span class="code__comment">// penktos eilutės šablonas</span>
+                  "footer"; <span class="code__comment">// šeštos eilutės šablonas</span>
+              }
+    
+              .grid-tablet {
+                display: grid;
+                grid-template-columns: 200px auto; <span class="code__comment">// Aprašome 2 stuleplius</span>
+                grid-template-rows: 60px 60px auto auto 60px;<span class="code__comment">// 5 eilutės</span>
+                grid-template-areas:
+                  "header header" <span class="code__comment">// pirmos eilutės šablonas</span>
+                  "nav    nav" <span class="code__comment">// antros eilutės šablonas</span>
+                  "main   main" <span class="code__comment">// trečios eilutės šablonas</span>
+                  "ads    gallery" <span class="code__comment">// ketvirtos eilutės šablonas</span>
+                  "footer footer"; <span class="code__comment">// penktos eilutės šablonas</span>
+              }
+    
+              .grid-desktop {
+                display: grid;
+                grid-template-columns: 250px 600px 400px auto ; <span class="code__comment">// Aprašome 4 stuleplius</span>
+                grid-template-rows: 60px auto auto 60px;<span class="code__comment">// 4 eilutės</span>
+                grid-template-areas:
+                  "header header  header  nav" <span class="code__comment">// pirmos eilutės šablonas</span>
+                  "ads    main    main    nav" <span class="code__comment">// antros eilutės šablonas</span>
+                  "ads    gallery gallery nav" <span class="code__comment">// trečios eilutės šablonas</span>
+                  "footer footer  footer  footer" <span class="code__comment">// ketvirtos eilutės šablonas</span>
+              }
+            </pre>
+            </div>
+          </section>
+    
+          <section id="grid-template" class="navbar-anchor-fix">
+            <div class="container container--narrow  container--with-sidebar-left mt-5">
+              <h2 class="mb-2">grid-template</h2>
+              <p>
+                Tai savybių <strong>grid-template-columns</strong>, <strong>grid-template-rows</strong> ir
+                <strong>grid-template-areas</strong> apjungimas.
+              </p>
+              <pre class="code">
+              .grid-desktop {
+                display: grid;
+                grid-template:
+                  "header header  header  nav" 60px
+                  "ads    main    main    nav" auto
+                  "ads    gallery gallery nav" auto
+                  "footer footer  footer  footer" 60px /
+                   250px  600px   400px   auto
+              }
+              </pre>
+            </div>
+          </section>
+    
+          <section id="įvardintų-linijų-pvz" class="navbar-anchor-fix">
+            <div class="container container--narrow  container--with-sidebar-left mt-5">
+              <h2 class="mb-2">Įvardintos linijos</h2>
+              <p>
+                Kartais sudarant tinklelio plotų šablonus (angl.: <em>grid-template-areas</em>) norima sudaryti
+                persiklojančius plotus. Tokiais atvejais, nėra įgalintos galimybės sukurti ploto šablono, kuriame tą pačią
+                vietą užimtų skirtingi plotai/sekcijos. Šiai problemai spręsti yra naudojama įvardintų tinklelio linijų
+                metodologija. <br><br>
+                Bet kuriai tinklelio linijai galima suteikti papildomus pavadinimus. Tuomet vaikiniam elementam yra aprašomas plotas pagal linijų apibrėžtumą: iš viršaus, kairės, apačios ir dešinės. Įvardinant plotus tokiu būdu, galime įgalinti sekcijų persiklojimą. <br><br>
+                Apibrėžus tinklelio vaikinius elementus įvardintomis linijomis, galime keisti jų išdėstymus aprašant eilučių ir stulpelių šablonus tėviniam elementus ir pervadinant kitas linijas, tokiais pat pavadinimais, kokiomis yra apibrėžti vaikiniai elementai.
+              </p>
+              <img src="../images/grid-named-lines1.png" class="w-100">
+              <pre class="code">
+    .grid {
+      display: grid;
+      <span class="code__comment">Stulpelių šablonas</span>
+      grid-template-columns: 
+        auto
+        [card-1-start card-3-start] <span class="code__comment">2 linijos sinonimai</span>
+        50px
+        [card-1-img-start card-3-img-start] <span class="code__comment">3 linijos sinonimai</span>
+        100px
+        [card-1-end card-3-end] <span class="code__comment">4 linijos sinonimai</span>
+        50px
+        [card-1-img-end card-3-img-end] <span class="code__comment">5 linijos sinonimai</span>
+        1rem
+        [card-2-img-start card-4-img-start] <span class="code__comment">6 linijos sinonimai</span>
+        50px
+        [card-2-start card-4-start] <span class="code__comment">7 linijos sinonimai</span>
+        100px
+        [card-2-img-end card-4-img-end] <span class="code__comment">8 linijos sinonimai</span>
+        50px
+        [card-2-end card-4-end] <span class="code__comment">9 linijos sinonimai</span>
+        auto;
+    
+      <span class="code__comment">Eilučių šablonas</span>
+      grid-template-rows: 
+        40px
+        [card-1-img-start card-2-img-start] <span class="code__comment">2 linijos sinonimai</span>
+        50px
+        [card-1-start card-2-start] <span class="code__comment">3 linijos sinonimai</span>
+        100px
+        [card-1-img-end card-2-img-end] <span class="code__comment">4 linijos sinonimai</span>
+        50px
+        [card-1-end card-2-end] <span class="code__comment">5 linijos sinonimai</span>
+        40px
+        [card-3-img-start card-4-img-start] <span class="code__comment">6 linijos sinonimai</span>
+        50px
+        [card-3-start card-4-start] <span class="code__comment">7 linijos sinonimai</span>
+        100px
+        [card-3-img-end card-4-img-end] <span class="code__comment">8 linijos sinonimai</span>
+        50px
+        [card-3-end card-4-end] <span class="code__comment">9 linijos sinonimai</span>
+        40px;
+    }
+    
+    .grid__card {
+      <span class="code__comment">... kortelės stiliai ...</span>
+    }
+    
+    .grid__card-img {
+      <span class="code__comment">... kortelės nuotraukos stiliai ...</span>
+    }
+    
+    <span class="code__comment">Kortelių apibrėžiami plotai</span>
+    .grid__card--1 { grid-area: card-1-start / card-1-start / card-1-end / card-1-end; }
+    .grid__card--2 { grid-area: card-2-start / card-2-start / card-2-end / card-2-end; }
+    .grid__card--3 { grid-area: card-3-start / card-3-start / card-3-end / card-3-end; }
+    .grid__card--4 { grid-area: card-4-start / card-4-start / card-4-end / card-4-end; }
+    
+    <span class="code__comment">Koretelių nuotraukų apibrėžiami stiliai</span>
+    .grid__card-img--1 { grid-area: card-1-img-start / card-1-img-start / card-1-img-end / card-1-img-end; }
+    .grid__card-img--2 { grid-area: card-2-img-start / card-2-img-start / card-2-img-end / card-2-img-end; }
+    .grid__card-img--3 { grid-area: card-3-img-start / card-3-img-start / card-3-img-end / card-3-img-end; }
+    .grid__card-img--4 { grid-area: card-4-img-start / card-4-img-start / card-4-img-end / card-4-img-end; }
+              </pre>
+            </div>
+          </section>
+        </div>
+    
+        <section id="responsive-pvz" class="navbar-anchor-fix">
+            <div class="container container--narrow  container--with-sidebar-left mt-5">
+              <h2 class="mb-2">Grid responsive pavyzdys</h2>
+              <p class="mb-4">Norėdami matyti skirtumą, keiskite ekrano dydį</p>
+            </div>
+            <div class="grid-task-1">
+              <div class="grid-task-1__navbar">navbar</div>
+              <div class="grid-task-1__categories">categories</div>
+              <div class="grid-task-1__main">main</div>
+              <div class="grid-task-1__footer">footer</div>
+            </div>
+          </section>
+    
+          <section id="example-grid-lines" class="navbar-anchor-fix">
+            <div class="container container--narrow  container--with-sidebar-left mt-5">
+              <h2 class="mb-2">Grid named lines responsive pavyzdys</h2>
+              <p class="mb-4">Norėdami matyti skirtumą, keiskite ekrano dydį</p>
+            </div>
+            <div class="grid-named-lines">
+              <div class="grid__card grid__card--1">
+                <h3>Pavadinimas</h3>
+                <p class="my-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est dolorum vitae perspiciatis voluptas deleniti delectus similique quod. Quaerat, incidunt fugiat.</p>
+                <a href="">More</a>
+              </div>
+              <div class="grid__card grid__card--2">
+                <h3>Pavadinimas</h3>
+                <p class="my-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est dolorum vitae perspiciatis voluptas deleniti delectus similique quod. Quaerat, incidunt fugiat.</p>
+                <a href="">More</a>
+              </div>
+              <div class="grid__card grid__card--3">
+                <h3>Pavadinimas</h3>
+                <p class="my-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est dolorum vitae perspiciatis voluptas deleniti delectus similique quod. Quaerat, incidunt fugiat.</p>
+                <a href="">More</a>
+              </div>
+              <div class="grid__card grid__card--4">
+                <h3>Pavadinimas</h3>
+                <p class="my-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est dolorum vitae perspiciatis voluptas deleniti delectus similique quod. Quaerat, incidunt fugiat.</p>
+                <a href="">More</a>
+              </div>
+        
+              <img src="https://unsplash.it/200/200"  class="grid__card-img grid__card-img--1">
+              <img src="https://unsplash.it/200/201"  class="grid__card-img grid__card-img--2">
+              <img src="https://unsplash.it/200/202"  class="grid__card-img grid__card-img--3">
+              <img src="https://unsplash.it/200/203"  class="grid__card-img grid__card-img--4">
+        
+            </div>
+          </section>
       
   </main>
 
@@ -67,5 +406,6 @@
   </footer>
 
 </body>
+
 
 </html>
