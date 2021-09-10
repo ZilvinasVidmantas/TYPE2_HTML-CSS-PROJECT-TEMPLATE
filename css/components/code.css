@@ -12,3 +12,8 @@
     color: darkgreen;
     font-style: italic;
 }
+
+code{
+    font-weight: 700;
+    font-size: 1.05rem;
+}
