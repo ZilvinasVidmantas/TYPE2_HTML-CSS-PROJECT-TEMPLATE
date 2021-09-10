@@ -37,10 +37,168 @@
     </div>
   </nav>
 
-  <footer class="footer bg-dark text-center text-light py-3 mt-5">
-    <span>All rights reserved CodeAcademy © 2021</span>
-  </footer>
-  
+  <main id="main" class="pt-navbar-height">
+    <div class="container container--narrow  container--with-sidebar-left mt-4">
+      <h1 class="mb-3">Flex</h1>
+      <p>
+        Tai display tipas, kuris leidžia kontroliuoti <strong>pirmo lygio</strong> vaikų išdėstymą. <br><br>
+        Kadangi <strong>„Flexbox“ yra modulis, o ne viena savybė</strong>, jis apima daug dalykų, įskaitant visą jo savybių rinkinį.
+        Vienais atvejais šią savybę reikia nustatyti konteineriui (pirminis elementas, kitaip "flex container“), kitais - savybę reikia pritaikyti "vaikams" („flex items“). <br> <br>
+        Jei „įprastas“ išdėstymas grindžiamas tiek block, tiek inline flow kryptimis, tai "flex" išdėstymas grindžiamas „flex-flow kryptimis“ (flex-flow directions). <br><br>
+        Elementai bus išdėstyti pagrindinėje (main) ašyje arba skersinėje (cross) ašyje.
+      </p>
+    </div>
+
+    <section id="flex-concepts" class="navbar-anchor-fix">
+      <div class="container container--narrow  container--with-sidebar-left mt-5">
+        <h2 class="mb-2">Pagrindinės Flexbox sąvokos</h2>
+        <img src="../images/flexbox-concepts.png" class="w-100">
+        <ul>
+          <li class="mb-2">
+            <h3>Dvi Flexbox ašys</h3> 
+            <p>
+            Dirbdami su „flexbox“ turite galvoti apie dvi ašis - pagrindinę (main) ir
+            skersinę (cross) ašis. Pagrindinę ašį apibrėžia flex-direction savybė, o skersinė ašis eina statmenai jai.
+          </p>
+          </li>
+          <li class="mb-2">
+            <h3>Pradžios (start) ir pabaigos (end) linijos</h3> 
+            <p>
+            Anksčiau CSS buvo nukreiptas į horizontalius ir
+            iš kairės į dešinę rašymo režimus. Šiuolaikiniai išdėstymo metodai apima įvairius rašymo režimus, todėl
+            nebemanome, kad teksto eilutė prasidės dokumento viršuje kairėje ir eis dešinės pusės link, o naujos eilutės
+            pasirodys viena po kitos.
+          </p>
+          </li>
+          <li class="mb-2">
+            <h3>Flex container</h3>
+            <p>
+            Dokumento sritis, išdėliota naudojant flexbox, vadinama flex container.
+            Norėdami sukurti flex container, nustatome srities konteinerio display ypatybę kaip flex arba inline-flex.
+            Šiuo atveju, tiesioginiai to konteinerio vaikai taps flex-items.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="flex-container-properties" class="navbar-anchor-fix">
+      <div class="container container--narrow container--with-sidebar-left mt-5">
+        <h2 class="pb-2">Flexbox container savybės</h2>
+        <ul>
+          <li class="mb-2">
+            <h3>Display</h3>
+            <p>
+              Apibūdina flex container; inline arba block, priklausomai nuo nurodytos vertės. Ši savybė įgalina flex
+              kontekstą visiems savo tiesioginiams vaikams.
+            </p>
+          </li>
+          <li class="mb-2">
+            <h3>Flex-direction</h3>
+            <p>
+              Šia savybe nustatoma pagrindinė (main) ašis, taip apibrėžiama kryptis, į kurią flex items yra dedami į flex container. Flexbox yra vienos krypties išdėstymo koncepcija - flex items yra išdėstyti horizontaliose
+              eilutėse arba vertikaliuose stulpeliuose.
+            </p>
+            <img src="../images/flexbox-flex-direction.png" class="w-100">
+          </li>
+          <li class="mb-2">
+            <h3>Flex-wrap</h3>
+            <p>
+              Pagal numatytuosius nustatymus, flex items bandys tilpti į vieną eilutę. Galite tai pakeisti ir leisti elementams išsidėstyti per kelias eilutes.
+            </p>
+            <img src="../images/flexbox-flex-wrap.png" class="w-100">
+          </li>
+          <li class="mb-2">
+            <h3>Flex-flow</h3>
+            <p>
+            Tai yra flex-direction ir flex-wrap savybių, kurios kartu apibrėžia flex container pagrindinę (main) ir skersinę (cross) ašis, santrumpa. Numatytoji vertė yra „nowrap“ eilutė.
+            </p>
+          </li>
+          <li class="mb-2">
+            <h3>Justify-content</h3>
+            <p>
+            Tai savybė, kuri apibūdina lygiavimą išilgai pagrindinėje (main) ašyje. Ji padeda paskirstyti papildomos laisvos vietos likučius, kai visi flex items linijoje yra nelankstūs arba yra lankstūs, tačiau pasiekė maksimalų dydį. Tai pat ši savybė turi įtakos elementų lygiavimui, kai jie perpildo eilutę.
+            </p>
+            <img src="../images/flexbox-justify-content.png" class="w-100">
+          </li>
+          <li class="mb-2">
+            <h3>Align-items</h3>
+            <p>
+            Ši savybė pibrėžia, kaip flex items išdėstomi išilgai esamos linijos skersinėje (cross) ašyje.
+            </p>
+            <img src="../images/flexbox-align-items.png" class="w-100">
+          </li>
+          <li class="mb-2">
+            <h3>Align-content</h3>
+            <p>
+            Ši savybė sulygiuoja flex container linijas kai skersinėje (cross) ašyje yra papildomos vietos, panašiai kaip justify-content savybė sulygiuoja atskirus elementus pagrindinėje (main) ašyje.
+            </p>
+            <img src="../images/flexbox-align-content.png" class="w-100">
+          </li>
+          <li>
+            <h3>Gap, row-gap, column-gap</h3>
+            <p>
+            Gap savybė kontroliuoja tarpą tarp flex elementų. Atstumas taikomas tik tarp elementų, o ne ant išorinių kraštų.
+            </p>
+            <img src="../images/flexbox-gap.png" class="w-100">
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="flex-items-properties" class="navbar-anchor-fix">
+      <div class="container container--narrow container--with-sidebar-left mt-4">
+        <h2 class="pb-2">Flex items savybės</h2>
+        <ul>
+          <li class="mb-2">
+            <h3>Order</h3>
+            <p>
+            Pagal numatytuosius nustatymus flex items yra išdėstyti pagal šaltinio tvarką. Ši savybė nustato tvarką, kuria jie rodomi flex container.
+            </p>
+            <img src="../images/flexbox-order.png" class="w-100">
+          </li>
+          <li class="mb-2">
+            <h3>Flex-grow</h3>
+            <p>
+            Ši savybė apibrėžia galimybę flex item augti esant poreikiui. Ji turi vienetinę vertę, kuri pasireiškia kaip proporcija. Flex-grow nurodo, kiek laisvos vietos flex container viduje daiktas turėtų užimti.
+            </p>
+            <img src="../images/flexbox-flex-grow.png" class="w-100">
+          </li>
+          <li class="mb-2">
+            <h3>Flex-shrink</h3>
+            <p>
+            Veikia panašiai kaip flex-grow, tačiau ši savybė apibrėžia galimybę flex item pagal poreikį mažėti.
+            </p>
+          </li>
+          <li class="mb-2">
+            <h3>Flex-basis</h3>
+            <p>
+            Ši savybė nurodo numatytąjį elemento dydį prieš paskirstant likusią vietą. Tai gali būti ilgis (pvz., 20%, 5rem ir tt) arba raktinis žodis. Automatinis raktinis žodis reiškia „pažiūrėkite
+            į mano pločio ar aukščio ypatybę“. Jei nustatyta 0 reikšmė, į papildomą vietą aplink turinį neatsižvelgiama. Jei nustatyta auto reikšmė, papildoma erdvė paskirstoma pagal jos flex-grow vertę.
+            </p>
+          </li>
+          <li class="mb-2">
+            <h3>Flex</h3>
+            <p>
+            Santrumpa flex-grow, flex-shrink ir flex-basis kartu sudėjus.Antrasis ir trečiasis parametrai (flex-shrink ir flex-basis) yra neprivalomi. Numatytoji reikšmė: 0 1 auto.
+            </p>
+          </li>
+          <li class="mb-2">
+            <h3>Align-self</h3>
+            <p>
+            Ši savybė leidžia nepaisyti numatytojo lygiavimo (arba nurodyto align-items) atskiriems flex items.
+            </p>
+            <img src="../images/flexbox-align-self.png" class="w-100">
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+    <footer class="footer bg-dark text-center text-light py-3 mt-5">
+      <span>All rights reserved CodeAcademy © 2021</span>
+    </footer>
+
 </body>
 
 </html>
