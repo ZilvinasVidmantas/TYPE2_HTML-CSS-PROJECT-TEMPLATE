@@ -6,6 +6,8 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
     color: var(--black);
+    font-size: 13px;
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .code .code__comment {
