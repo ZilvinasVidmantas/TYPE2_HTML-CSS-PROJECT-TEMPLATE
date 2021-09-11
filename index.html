@@ -37,8 +37,8 @@
     </div>
   </nav>
 
-  <main class="pt-navbar-height"> 
-    <div class="container container--narrow mt-4">
+  <main id="section-main" class="pt-navbar-height"> 
+    <div class="container container--narrow  container--with-sidebar-left mt-4">
     <h1 class="mb-3">Pagrindiniai HTML elementai</h1>
     <p>
       HTML tai puslapio struktūra - turinys. Turiniui kurti naudojama
@@ -53,8 +53,8 @@
    </div>
   </main>
 
-  <section class="navbar-anchor-fix">
-    <div class="container container--narrow mt-4">
+  <section id="section-header" class="navbar-anchor-fix">
+    <div class="container container--narrow container--with-sidebar-left mt-4">
     <h2 class="mb-2">Antraštės</h2>
     <p>
       Antraštės tai puslapio sekcijų įvardinimas - apibūdinimas. Antraštės
@@ -66,8 +66,8 @@
     </div>
   </section>
 
-  <section class="navbar-anchor-fix">
-    <div class="container container--narrow mt-4">
+  <section id="section-display" class="navbar-anchor-fix">
+    <div class="container container--narrow container--with-sidebar-left mt-4">
     <h2 class="pb-3">Elementų tipai; Display</h2>
     <p>
       <strong>CSS savybė display</strong> apibūdina, kaip bus
@@ -89,7 +89,7 @@
       </li>
     </ul>
     <article>
-      <h3>Dažniausiai naudojami inline elementai</h3>
+      <h3 class="mb-3">Dažniausiai naudojami inline elementai</h3>
       <ul class="ul">
         <li><strong>span</strong> - bendrinis teksto elementas</li>
         <li><strong>strong</strong> - paryškintas tekto elementas</li>
@@ -115,7 +115,7 @@
       </article>
     </article>
     <article>
-      <h3>Dažniausi inline-block elementai</h3>
+      <h3 class="mb-3 mt-4">Dažniausi inline-block elementai</h3>
       <ul>
         <li>
           <strong>input</strong> - vartotojo įvesties elementas
@@ -175,7 +175,7 @@
     </article>
 
     <article>
-      <h3>Dažniausi block elementai</h3>
+      <h3 class="mb-3 pt-4">Dažniausi block elementai</h3>
       <ul>
         <li><strong>div</strong> - bendrinis blokinis elementas</li>
         <li><strong>header</strong> - viršutinis komponento elementas</li>
@@ -191,8 +191,8 @@
    </div>
   </section>
 
-  <section class="navbar-anchor-fix">>
-  <div class="container container--narrow pt-4">
+  <section id="section-images" class="navbar-anchor-fix">>
+  <div class="container container--narrow container--with-sidebar-left pt-4">
     <h2 class="mb-2">Nuotraukos</h2>
     <p>
       Nuotraukos yra <strong>inline</strong> elementai. Visgi galima nustatyti nuotraukos plotį ir aukšti naudojant atributus. Nustačius vieną dimensiją(plotį arba aukštį) kita prisiderina pagal orginalios nuotrukos proporcijas. Jeigu nustatome 2 dimensijas, tuomet nuotrauka yra ištempiama (arba sutraukiama).
@@ -228,7 +228,6 @@
     </article>
   </div>
   </section>
-</body>
 
   <footer class="bg-black text-center text-light py-3 mt-5">
     <span>All rights reserved CodeAcademy © 2021</span>
