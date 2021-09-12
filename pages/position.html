@@ -37,8 +37,21 @@
         </div>
     </nav>
 
+    <div class="sidebar__toggler">></div>
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a class="sidebar__link" href="#position-main">Pagrindinis</a></li>
+                <li><a class="sidebar__link" href="#position-relative">Position: relative</a></li>
+                <li><a class="sidebar__link" href="#position-absolute">Position: absolute</a></li>
+                <li><a class="sidebar__link" href="#position-fixed">Position: fixed</a></li>
+                <li><a class="sidebar__link" href="#position-sticky">Position: sticky</a></li>
+            </ul>
+        </nav>
+    </aside>
+
     <main id="position-main" class="pt-navbar-height">
-        <div class="container container--narrow mt-4">
+        <div class="container container--narrow container--with-sidebar-left mt-4">
             <h1 class="mb-3">Position</h1>
             <p>
                 Position, tai HTML elemento pozicionavimas kitų elementų atžvilgiu.
@@ -51,8 +64,8 @@
                 keli pozicionavimo tipai, kurie bus aprašyti šios sekcijos potemėse.
             </p>
         </div>
-        <section id="Position-relative" class="navbar-anchor-fix">
-            <div class="container container--narrow mt-5">
+        <section id="position-relative" class="navbar-anchor-fix">
+            <div class="container container--narrow container--with-sidebar-left mt-5">
                 <h2 class="mb-2">Relative</h2>
                 <p>
                     Tai elemento pozicionavimas, pagal standartinę (static) elemento
@@ -95,7 +108,7 @@
             </div>
         </section>
         <section id="position-absolute" class="navbar-anchor-fix">
-            <div class="container container--narrow mt-5">
+            <div class="container container--narrow container--with-sidebar-left mt-5">
                 <h2 class="pb-2">Absolute</h2>
                 <p>
                     Tai toks pozicionavimo tipas, kuomet yra ieškomas pirmas tėvinės
@@ -242,7 +255,7 @@
         </section>
 
         <section id="position-fixed" class="navbar-anchor-fix">
-            <div class="container container--narrow mt-5">
+            <div class="container container--narrow container--with-sidebar-left mt-5">
                 <h2 class="pb-2">Fixed</h2>
                 <p>
                     <strong>position: fixed</strong> elementai visada išlieka toje pačioje
@@ -257,7 +270,7 @@
         </section>
 
         <section id="position-sticky" class="navbar-anchor-fix">
-            <div class="container container--narrow mt-5">
+            <div class="container container--narrow container--with-sidebar-left mt-5">
                 <h2 class="pb-2">Sticky</h2>
                 <p>
                     Tai toks pozicionavimo tipas, kuomet ieškomas elementas tėvinėje
