@@ -37,208 +37,112 @@
     </div>
   </nav>
 
-   <div class="sidebar__toggler">></div>
+  <div class="sidebar__toggler">></div>
   <aside class="sidebar">
     <nav>
-        <ul>
-          <li><a class="sidebar__link" href="#section-main">Pagrindiniai HTML elementai</a></li>
-          <li><a class="sidebar__link" href="#section-header">Antraštės</a></li>
-          <li><a class="sidebar__link" href="#section-display">Elementų display tipai</a></li>
-          <li><a class="sidebar__link" href="#section-images">Nuotraukos</a></li>
-        </ul>
-      </nav>
-    </aside>
-
-  <main id="section-main" class="pt-navbar-height"> 
-    <div class="container container--narrow container--with-sidebar-left mt-4">
-     <h1 class="mb-3">Pagrindiniai HTML elementai</h1>
-     <p>
-      HTML tai puslapio struktūra - turinys. Turiniui kurti naudojama
-      pagrindiniai HMTL elementai.
-    </p>
-  </div>
-    <article>
-      <div class="container container--narrow container--with-sidebar-left mt-4">
-      <h2 class="mb-2">HTML elemento struktūra</h2>
-      <img src="images/html-element-structure.png" width="100%" />
-    </article>
-    </div>
-
-  <section id="section-header" class="navbar-anchor-fix">
-    <div class="container container--narrow container--with-sidebar-left mt-4">
-    <h2 class="mb-2">Antraštės</h2>
-    <p>
-      Antraštės tai puslapio sekcijų įvardinimas - apibūdinimas. Antraštės
-      turi
-      būti įvardintos mažėjimo tvarka, ir negalima praleisti jų dydžių. h1
-      -> h2
-      -> h3
-    </p>
-    </div>
-  </section>
-
-  <section id="section-display" class="navbar-anchor-fix">
-    <div class="container container--narrow container--with-sidebar-left mt-4">
-    <h2 class="pb-3">Elementų tipai; Display</h2>
-    <p>
-      <strong>CSS savybė display</strong> apibūdina, kaip bus
-      atvaizduojamas -
-      išdėstomas HTML elementas.
-    </p>
-    <ul class="ul">
-      <li>
-        <strong>inline</strong> - baigtinis tekstinis elementas
-      </li>
-      <li>
-        <strong>inline-block</strong> - eilutės elementas, kuriam gali
-        būt
-        nustatomi aukščio ir pločio nustatymai, bei paraštės.
-      </li>
-      <li>
-        <strong>block</strong> - elementai per visą tėvinio elemento
-        plotį
-      </li>
-    </ul>
-    <article>
-      <h3 class="mb-3">Dažniausiai naudojami inline elementai</h3>
-      <ul class="ul">
-        <li><strong>span</strong> - bendrinis teksto elementas</li>
-        <li><strong>strong</strong> - paryškintas tekto elementas</li>
-        <li><strong>em</strong> - pasviręs teksto elementas</li>
-        <li><strong>a</strong> - nuoroda</li>
-        <li><strong>img</strong> - nuotrauka</li>
+      <ul>
+        <li><a class="sidebar__link" href="#section-main">Apie HTML</a></li>
+         <li><a class="sidebar__link" href="#section-elements-attributes">Elementai ir atributai</a></li>
+         <li><a class="sidebar__link" href="#section-main-element-groups">Pagrindinės elementų grupės</a></li>
+         <li><a class="sidebar__link" href="#css">CSS</a></li>
       </ul>
-      <article>
-        <h4>Pavyzdžiai</h4>
+    </nav>
+      
+  </aside>
+
+  <main id="section-main" class="pt-navbar-height">
+    <div class="container container--narrow container--with-sidebar-left mt-4">
+      <h1 class="mb-3">Apie HTML</h1>
+      <p>
+        HTML (Hyper text Markup Language „Hiperteksto žymėjimo kalba“) – tai kompiuterinė žymėjimo kalba, naudojama
+        pateikti turinį internete. Kalbą standartizuoja W3 konsorciumas.
+      </p>
+    </div>
+
+    <section id="section-elements-attributes" class="navbar-anchor-fix">
+      <div class="container container--narrow container--with-sidebar-left mt-5">
+        <h2 class="mb-2">Elementai ir atributai</h2>
+        <img src="images/html-element-structure.png" width="100%" class="mb-3" />
         <p>
-          <span>Paprastas tekstas, naudojama struktūrizuojant
-            turinį</span>
-          <strong>Paryškintas tekstas</strong>
-          <em>Pasviręs tekstas</em>
-          <em><strong>Paryškintas ir pasviręs tekstas</strong></em> 
-          <img src="https://unsplash.it/24/20">
-          <img src="https://unsplash.it/60/30">
-          <a href="https://google.lt">Nuoroda tame pačiame skirtuke</a>
-          <a href="https://google.lt" target="blank">
-            Nuoroda naujame skirtuke
-          </a>
+          Pagrindinis HTML kalbos vienetas yra elementas. Kaip ir XML, HTML elementas turi vardą ir gali turėti bet kokį
+          skaičių atributų. Elemento viduje gali būti tekstas bei kiti elementai. Tiek tekstas, tiek ir dukteriniai
+          elementai paprastai gali kartotis ir sekti bet kuria tvarka. <br><br>
+          Elemento atributai turi vardą ir reikšmę. Jei galimi atributai nenurodomi, paprastai galioja sutartos
+          nutylėjimo taisyklės. Pavyzdžiui, HTML fragmentas <font color="red"><b>r</b> raudona</font> turi du elementus.
+          Vienas jų (font) perjungia rodomo teksto spalvą į raudoną. Šio elemento viduje esantis antrasis elementas (b),
+          perjungia šriftą į paryškintą. Pirmasis elementas turi vieną atributą (color) su reikšme red. Antrasis
+          elementas atributų neturi.
         </p>
-      </article>
-    </article>
-    <article>
-      <h3 class="mb-3 mt-4">Dažniausi inline-block elementai</h3>
-      <ul>
-        <li>
-          <strong>input</strong> - vartotojo įvesties elementas
-          <ul>
-            <li>
-              <strong>type="text"</strong>:
-              <input type="text" value="pavyzdinis tekstas">
-            </li>
-            <li>
-              <strong>type="password"</strong>:
-              <input type="password" value="pavyzdinis tekstas">
-            </li>
-            <li>
-              <strong>type="email"</strong>:
-              <input type="email" value="pavyzdinis tekstas">
-            </li>
-            <li>
-              <strong>type="number"</strong>:
-              <input type="number" value="123">
-            </li>
-            <li>
-              <strong>type="date"</strong>:
-              <input type="date">
-            </li>
-            <li>
-              <strong>type="range"</strong>:
-              <input type="range" min="0" max="10" value="4">
-            </li>
-            <li>
-              <strong>type="color"</strong>:
-              <input type="color" value="#ffffff">
-            </li>
-            <li>
-              <strong>type="checkbox"</strong>:
-              <input type="checkbox">
-            </li>
-            <li>
-              <strong>type="radio"</strong>:
-              <input type="radio">
-            </li>
-          </ul>
-        </li>
-        <li>
-          <strong>text-area</strong>:
-          <textarea cols="30" rows="10"
-            style="vertical-align: top">Tekstas 3000</textarea>
-        </li>
-        <li>
-          <strong>select</strong>:
-          <select>
-            <option>Vilnius</option>
-            <option>Kaunas</option>
-            <option>Klaipėda</option>
-          </select>
-        </li>
-      </ul>
-    </article>
+      </div>
+    </section>
 
-    <article>
-      <h3 class="mb-3 pt-4">Dažniausi block elementai</h3>
-      <ul>
-        <li><strong>div</strong> - bendrinis blokinis elementas</li>
-        <li><strong>header</strong> - viršutinis komponento elementas</li>
-        <li><strong>footer</strong> - apatinis komponento elementas</li>
-        <li><strong>section</strong> - pagrindinė puslapio sekcija</li>
-        <li><strong>article</strong> - potemės blokinis elementas</li>
-        <li><strong>aside</strong> - šoninis blokinis elementas</li>
-        <li><strong>p</strong> - pastraipos blokinis elementas</li>
-        <li><strong>h1-h6</strong> - antraščių blokiniai elementai</li>
-        <li><strong>form</strong> - vartotojo įvesčių gaubiamasis elementas</li>
-      </ul>
-    </article>
-   </div>
-  </section>
+    <section id="section-main-element-groups" class="navbar-anchor-fix">
+      <div class="container container--narrow container--with-sidebar-left mt-5">
+        <h2 class="mb-2">Pagrindinės elementų grupės</h2>
+        <p>
+          HTML kalbos žymėjimo elementai (angl. tags – žymės) skirstomi į:
+        </p>
+        <ul class="ul">
+          <li class="mb-2">
+            <strong>Struktūrinius</strong> - apibrėžia teksto paskirtį.
+            <pre class="code"><strong>< h2> Žymėjimo elementai < /h2></strong></pre>
+            <p>
+              <em>Pastaba</em>: antraštės yra puslapio sekcijų įvardijimas - apibūdinimas. Antraštės turi būti įvardytos
+              mažėjimo tvarka, ir negalima praleisti jų dydžių. h1 -> h2 -> h3
+            </p>
+          </li>
+          <li class="mb-2">
+            <strong>Prezentacinius</strong> - nurodo, kaip rodyti tekstą.
+            <pre class="code"><strong>< b> paryškintas < /b></strong></pre>
+          </li>
+          <li class="mb-2">
+            <strong>Hipertekstinius</strong> - sukuria nuorodas tarp dokumentų ar jų dalių.
+            <pre class="code"><strong>< a href="http://lt.wikipedia.org/"> Vikipedija < /a></strong></pre>
+          </li>
+          <li>
+            <strong>Kitus</strong>
+            <pre class="code"><strong>< img src="image.gif"></strong></pre>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="section-images" class="navbar-anchor-fix">
-  <div class="container container--narrow container--with-sidebar-left pt-4">
-    <h2 class="mb-2">Nuotraukos</h2>
-    <p>
-      Nuotraukos yra <strong>inline</strong> elementai. Visgi galima nustatyti nuotraukos plotį ir aukšti naudojant atributus. Nustačius vieną dimensiją(plotį arba aukštį) kita prisiderina pagal orginalios nuotrukos proporcijas. Jeigu nustatome 2 dimensijas, tuomet nuotrauka yra ištempiama (arba sutraukiama).
-      Nuotraukos <strong>src</strong> atribute turime nurodyti kelią iki nuotraukos.
-      Nuotraukos <strong>alt</strong> atrbiute, turime nurodyti tekstą, kuris bus rodomas tik tuo atveju, jei <strong>src</strong> atribute nurodytu keliu nuotrauka nėra randama/pasiekiama.
-    </p>
-    <article>
-      <h3 class="mb-2 pt-2">Pavyzdžiai</h3>
-      <article>
-        <h4>Nuotrauka su keliu į išorinę nuorodą</h4>
-        <img src="https://unsplash.it/200/150"/>
-      </article>
-      <article>
-        <h4>Nuotrauka su keliu į failų sistemą</h4>
-        <img src="images/200x200.png"/>
-      </article>
-      <article>
-        <h4>Nuotrauka su blogu keliu ir alt atributas</h4>
-        <img src="images/tokios nera.jpg" alt="alt atributo reikšmė"/>
-      </article>
-      <article>
-        <h4>Nuotraukos su vienos dimensijos nustatymu</h4>
-        <img src="https://unsplash.it/150/300" height="100"/>
-        <img src="https://unsplash.it/200/200" height="100"/>
-        <img src="https://unsplash.it/300/150" height="100"/>
-      </article>
-      <article>
-        <h4>Nuotraukos su dviejų dimensijų nustatymais</h4>
-        <img src="https://unsplash.it/1500/300" height="100" width="100"/>
-        <img src="https://unsplash.it/200/200" height="100" width="100"/>
-        <img src="https://unsplash.it/300/1500" height="100" width="100"/>
-      </article>
-    </article>
-  </div>
-  </section>
+    <section id="css" class="navbar-anchor-fix">
+      <div class="container container--narrow container--with-sidebar-left mt-5">
+        <h2 class="mb-2">CSS</h2>
+        <p>
+          Nors ankstesnėse HTML versijose buvo nemažai išvaizdą aprašančių elementų, bet rekomenduojama HTML kalba
+          žymėti dokumento sandarą, o išvaizdą (teksto spalvas ir pan.) aprašyti <strong>atskirame CSS
+            dokumente</strong>.
+        </p>
+        <ul class="ul">
+          <li class="mb-2">
+            Toks dokumentas užima mažiau vietos ir greičiau pasirodo vartotojo naršyklėje (įvairių puslapių išvaizdą
+            aprašantis CSS dokumentas iš serverio atsisiunčiamas tik vienąkart);
+          </li>
+          <li class="mb-2">
+            Toks dokumentas lengviau bei kokybiškiau apdorojamas automatiškai, todėl tokius dokumentus geriau
+            indeksuoja paieškos sistemos.
+          </li>
+          <li class="mb-2">
+            Naudojant CSS, lengviau keisti iškart visų puslapių išvaizdą;
+          </li>
+          <li class="mb-2">
+            Taip paprasčiau pasiekti, jog šiuos puslapius įvairios naršyklės rodytų vienodai;
+          </li>
+          <li class="mb-2">
+            Esant ribotam perdavimo kanalui galima siųsti tik patį HTML dokumentą, bei nesiųsti jo CSS;
+          </li>
+          <li class="mb-2">
+            Galima siųsti tik patį HTML dokumentą, bei nesiųsti jo CSS jei naršyklė nepajėgi jį atvaizduoti;
+          </li>
+          <li>
+            Panaudojus kelis skirtingus CSS dokumentus, tą patį HTML dokumentą galima gerai pritaikyti skirtingoms
+            naršyklėms, pvz., vienaip atvaizduoti kompiuterio ekrane, o kitaip – mobiliajame telefone.
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <footer class="bg-dark text-center text-light py-3 mt-5">
