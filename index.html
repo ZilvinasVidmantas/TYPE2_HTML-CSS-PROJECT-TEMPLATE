@@ -37,21 +37,32 @@
     </div>
   </nav>
 
+   <div class="sidebar__toggler">></div>
+  <aside class="sidebar">
+    <nav>
+        <ul>
+          <li><a class="sidebar__link" href="#section-main">Pagrindiniai HTML elementai</a></li>
+          <li><a class="sidebar__link" href="#section-header">Antraštės</a></li>
+          <li><a class="sidebar__link" href="#section-display">Elementų display tipai</a></li>
+          <li><a class="sidebar__link" href="#section-images">Nuotraukos</a></li>
+        </ul>
+      </nav>
+    </aside>
+
   <main id="section-main" class="pt-navbar-height"> 
-    <div class="container container--narrow  container--with-sidebar-left mt-4">
-    <h1 class="mb-3">Pagrindiniai HTML elementai</h1>
-    <p>
+    <div class="container container--narrow container--with-sidebar-left mt-4">
+     <h1 class="mb-3">Pagrindiniai HTML elementai</h1>
+     <p>
       HTML tai puslapio struktūra - turinys. Turiniui kurti naudojama
       pagrindiniai HMTL elementai.
     </p>
+  </div>
     <article>
-      <div class="container container--narrow mt-4">
+      <div class="container container--narrow container--with-sidebar-left mt-4">
       <h2 class="mb-2">HTML elemento struktūra</h2>
       <img src="images/html-element-structure.png" width="100%" />
     </article>
     </div>
-   </div>
-  </main>
 
   <section id="section-header" class="navbar-anchor-fix">
     <div class="container container--narrow container--with-sidebar-left mt-4">
@@ -191,7 +202,7 @@
    </div>
   </section>
 
-  <section id="section-images" class="navbar-anchor-fix">>
+  <section id="section-images" class="navbar-anchor-fix">
   <div class="container container--narrow container--with-sidebar-left pt-4">
     <h2 class="mb-2">Nuotraukos</h2>
     <p>
@@ -200,7 +211,7 @@
       Nuotraukos <strong>alt</strong> atrbiute, turime nurodyti tekstą, kuris bus rodomas tik tuo atveju, jei <strong>src</strong> atribute nurodytu keliu nuotrauka nėra randama/pasiekiama.
     </p>
     <article>
-      <h3>Pavyzdžiai</h3>
+      <h3 class="mb-2 pt-2">Pavyzdžiai</h3>
       <article>
         <h4>Nuotrauka su keliu į išorinę nuorodą</h4>
         <img src="https://unsplash.it/200/150"/>
@@ -228,10 +239,12 @@
     </article>
   </div>
   </section>
+  </main>
 
   <footer class="bg-black text-center text-light py-3 mt-5">
     <span>All rights reserved CodeAcademy © 2021</span>
   </footer>
 
 </body>
+
 </html>
